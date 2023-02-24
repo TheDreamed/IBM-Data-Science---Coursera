@@ -1,0 +1,77 @@
+From Deployment to Feedback
+
+Deployment - Are stakeholders familiar with the new tool?
+
+Case Study
+    Understanding the result
+        Assimilate knowledge for business
+            Practical Understanding of the meaning of model results.
+            Implications of model results for designing intervention actions.
+    Gathering application requirements
+        Application requirements
+            Automated, near-real-time risk assessments of CHF inpatients.
+            Easy to use
+            Automated data preparation and scoring
+            Up-to-date risk assessment to help cliniciancs target high-risk patients.
+    Additional Requirements?
+        Training for Clinical staff
+        Tracking / Monitoring processes
+
+Feedback - Problem solved? Question answered?
+
+    Once the model is evaluated and the data scientist is confident it will work,
+    it is deployed and put to the ultimate test
+
+        - Actual real-time use in the field.
+
+Case Study - Assessing model performance
+
+    Define review process
+        - To measure results of applying the risk model to the CHF patient population
+        - Track patients who received intervention
+        - Actual readmission outcomes
+        - Measure effectiveness of intervention-
+        - Compare readmission rates before and after model implementation.
+    Refine model
+        - Initial review after the first year of implementation
+        - Based on feedback data and knowledge gained
+        - Participation in intervention program
+        - Possibly incorporate detailed pharmaceutical data originally deferred
+        - Other possible refinements as yet known.
+    Redeploy
+        - Continue modeling, deployment, feedback, and refinement throughout the life of the intervention program.
+
+    Course Summary
+
+        Thinking like a data scientist
+            - Forming a concrete business or research Problem
+            - Collecting and analyzing data
+            - Building a model
+            - Understanding the feedback after model deployment
+        Learned the importance of:
+            - Understanding the Question
+            - Picking the most effective analytic approach
+        To  Work with the data
+            - Determining the data requirements
+            - Collecting the appropriate data
+            - Understanding the data.
+            - Preparing the data for modeling
+        To Deriving the answer
+            - Evaluating and deploying the modeling
+            - Getting feedback on it
+            - Using that feedback constructively so as to improve the model
+    P.S the stages of this methodology are iterative
+
+
+Lesson Summary
+In this lesson, you have learned:
+
+The importance of stakeholder input.
+
+To consider the scale of deployment.
+
+The importance of incorporating feedback to refine the model.
+
+The refined model must be redeployed.
+
+This process should be repeated as often as necessary.
