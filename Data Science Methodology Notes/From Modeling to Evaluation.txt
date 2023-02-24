@@ -25,7 +25,8 @@ Data Science Methodology - Evaluation
 
     When and how to adjust the model?
         Predictive Model -  used statistical technique to predict future behavior.
-        Descriptive model -  to help specify and/or understand what the system is, what it does, and how it does it.
+        Descriptive model -  to help specify and/or understand what the system is, what it does,
+        and how it does it.
         Statistical significance - provide evidence concerning the plausibility of the null hypothesis
 
     Case Study -  Using the ROC Curve

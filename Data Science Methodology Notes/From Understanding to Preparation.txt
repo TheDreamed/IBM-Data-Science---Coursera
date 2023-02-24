@@ -64,7 +64,8 @@ Understanding the Data
 
         Roll up to 1 record per patient
         Create new columns representing the transaction
-        Outpatients visits/Inpatient episodes: frequency, recency, diagnoses/ length of stay, procesdures and prescriptions.
+        Outpatients visits/Inpatient episodes: frequency, recency,
+        diagnoses/ length of stay, procesdures and prescriptions.
         Comorbidities with CHF
 
     More or less data needed?

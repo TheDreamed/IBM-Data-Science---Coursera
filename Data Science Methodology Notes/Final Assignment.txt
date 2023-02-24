@@ -1,0 +1,19 @@
+1. Most of the time in the healthcare industry, especially in public hospitals, some patients cannot be accommodated on time or cannot be accommodated at all, and we will try to solve that.
+2. Why can't a hospital accommodate all patients that need care?
+
+
+1. Analytic Approach: I will use a descriptive model since this problem can show relationships between the number of health workers/doctors on duty and the number of patients on a particular day.
+
+2. Data Requirements: As far as my knowledge can go in the healthcare industry, the requirements that I need to get from these hospitals are the location, admission to what department(pediatrics, neurology, psychiatry, etc.), time of patient accommodation, date(day), the number of doctors available for each department, and the number of patients not accommodated in a tabular format.
+
+3. Data Collection: In the data collection procedure, I can attain data through the corporate data warehouse and In-patient record system, which I can get by communicating with the hospital's stakeholders.
+
+4. Data Understanding and Preparation: As we identify what we need in the given data, I can scrape every data we need from the corporate data warehouse and In-patient record system and merge it into one table, which includes the:
+a. Patient's location
+b. Admission to what department
+c. Time and date(day) of accommodation
+d. Number of doctors available for each department
+e. Number of patients not accommodated on a particular time/day
+After this, we can cleanse the data by putting it in our desired format and removing patients with missing values for our model to be credible.
+
+5. Modeling and Evaluation:  Here, I can use both descriptive and predictive models and decide which model is better. Using the Predictive model, we can predict future accommodations numbers relating to the number of doctors available and patients needing accommodation on a particular day. For the descriptive model, we can see the relation of the number of doctors available to the number of accommodated patients on a particular day/time.
