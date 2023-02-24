@@ -1,0 +1,89 @@
+Understanding the Data
+
+    From Understanding to Preparation
+
+        Data Understanding
+            - What does it mean to "prepare" or "clean" data?
+        Data Preparation
+            - What are ways in which data is prepared?
+
+
+    Case Study - Understanding the data
+
+        Descriptive statistics
+            Univariate statistics
+            Pairwise correlations
+            Histogram
+
+    Case Study - Looking at data quality
+
+        Data quality
+            - Missing values
+            - Invalid or misleading values.
+
+    Case study - This is an iterative process
+
+        Iterative data collection and understanding
+            - Refined definition of CHF admission.
+
+    Data preparation - Cleansing Data
+
+            Transforming data to be easier to work with
+
+    Using domain knowledge
+
+         Feature Engineering - the process of using domain knowledge of the data to create features that make the machinelearning algorithms work.
+
+    Working with text analysis
+
+
+    Case Study - Data Preparation
+
+    Actually define Congested Heart Failure
+
+    1. Set of diagnosis
+    2. CHF is only one type of heart failure
+
+    Defining readmission.
+
+    1. Timing of events are evaluated whether one is an index admission or first time or not.
+
+
+    Case Study -  Defining CHF admission
+
+        Define CFF admission and CHF Readmission
+
+    Case Study - Aggregating records
+
+        Transactional records
+            - Claims: professional provider, facility, pharmaceutical
+            - Inpatient and outpatient records: diagnoses, procedures, prescriptions, etc.
+            - Possibly thousands per patient depending on clinical history.
+
+    Aggregating to patient level
+
+        Roll up to 1 record per patient
+        Create new columns representing the transaction
+        Outpatients visits/Inpatient episodes: frequency, recency, diagnoses/ length of stay, procesdures and prescriptions.
+        Comorbidities with CHF
+
+    More or less data needed?
+
+        Literature review of important factors for CHF readmission
+
+        Loop back to data collection stage and add additional data, if needed.
+
+    Completing the data set
+
+        Merge all data into one table
+            - One record per patient
+            - List of variables used in modeling
+                - Target: CHF readmission with 30 days (Yes/No), following discharge from CHF hospitalization.
+
+    Using training sets
+     Cohort: 2,343 patients
+
+     Randomly divided into training and testing sets: 70% / 30% split.
+
+     Training: 1,640 patients
+     Testing: 703 patients

@@ -1,0 +1,85 @@
+Data Science Methodology
+    Methodology - Systems of methods used in a particular area of study or activit.y
+
+Data Science Methodology aims to answer the following 10 questions in this prescribed sequence:
+
+From problem to approach:
+    1. What is the problem that you are trying to solve?
+    2. How can you use data to answer the question?
+
+Working with the data:
+    3. What data do you need to answer the question?
+    4. Where is the data coming from (identify all sources) and how will you get it?
+    5. Is the data that you collected representative of the problem to be solved?
+    6. What additional work is required to manipulate and work with the data?
+
+Deriving the answer:
+    7. In what way can the data be visualized to get the answer that is required?
+    8. Does the model used really answer the initial question or does it need to be adjusted?
+    9. Can you put the model into practice?
+    10. Can you get constructive feedback into answering the question?
+
+
+CRISP-DM(Cross-Industry Standard Process for Data Mining)
+    - a process aimed at increasing the sue of data ming over a wide variety of business applications and industries.
+
+Crisp-DM model
+    1. Business Understanding - This is where the intention of the project is outlined.
+
+    2. Data Understanding - Relies on business understanding. Data is collected at this stage of the process. CRISP-DM combines the stages of Data Requirements, Data Collection, and Data Understanding from the Foundational Methodology Outline.
+
+    3. Data Preparation - Data must be transformed into a useable subset unless it is determined that more data is needed. Must be checked for questionable, missing, or ambiguous cases.
+
+    4. Modeling - Once prepared  for use, the data must be expressed through models, give meaningful insights, and hopefully new knowledge. The use of models reveals patterns and structures within the data that provide insights to the features of interest.
+
+    5. Evaluation - The selected model must be tested. This is usally done by having a pre-selected test, set to run the rained model on.
+
+    6. Deployment - The model is used on new data outside of the scope of the data set and by new stakeholders. The new interactions at this phase might reveal the new variables and needs for the dataset and model. Revisions are often found after deployment.
+
+Analytic Approach
+
+    Pick analytic approach based on type of question
+
+    Descriptive
+    - Current Status
+
+    Diagnostic (Statistical Analysis)
+    - What happened?
+    - Why is this happening?
+
+    Predictive
+    - What if these trends continue?
+    - What will happen next?
+
+    Prescriptive
+    - How do we solve it?
+
+
+    What are the types of questions?
+     The correct approach depends on business requirements for the model.
+
+
+    If the question is to determine probabilities of an action
+    - Use a Predictive model
+
+    If the question is to show relationships
+    - Use a decriptive model
+
+    If the question requires a yes/no answer
+    - Use a classification model
+
+    Machine Learning
+    - Learning without explicitly programmed.
+    - Identifies relationships and trends in t
+
+
+    Case Study - Decision tree classification selected!
+
+    Predictive model
+        - To predict an outcome
+
+    Decision Tree classification
+        - Categorical outcome
+        - Explicit "decision path" showing conditions leading to high risk
+        - Likelihood of classified outcome
+        - Easy to understand and apply

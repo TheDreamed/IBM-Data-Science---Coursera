@@ -1,0 +1,49 @@
+Data requirements - Cooking with data
+
+    From Requirements to Collection
+        Data Requirements
+            - What are data requirements?
+        Data Collection
+            - What occurs during data collection?
+
+
+    Case Study
+
+    Define and select cohort
+        - In-patient within health insurance provider's service area
+        - Primary diagnosis of CHF in one year.
+        - Continuous enrollment for at least 6 months prior to primary CHF admission
+        - Disqualifying conditions
+
+    Content, formats, representations suitable for decision tree classifier.
+        - One record per patient with columns representing variables(dependent variable and predictors)
+        - Content covering all aspects of each patient's clinical history
+            - Transactional format
+            - Transformations required.
+
+
+    Data collection - Ingredients?
+
+        From Requirements to Collection
+            Data Requirements
+                - What are data requirements?
+            Data Collection
+                - What occurs during data collection
+
+    Case Study - Gathering available data
+
+        Available data sources
+            - Corporate data warehouse (single source of medical and claims, eligibility, provider, and member information)
+            - In-patient record system
+            - Claim payment system
+            - Disease management program information
+
+    Case Study - Deferring Inaccessible data
+
+        Data wanted but not available
+            - Pharmaceutical records
+            - Decided to defer
+
+    Case Study - Merging data
+
+        Eliminate redundant data
