@@ -1,0 +1,50 @@
+Modeling - Concepts
+
+
+Modeling Questions
+    In what way can the data be visualized to get the answer that is required?
+
+    Evaluation
+    Does the model used really answer the initial question or does it need to be adjusted?
+
+Data Modeling
+    Descriptive and Predictive modeling can be used.
+    Training set - a historical data used to know the accuracy of the model depending on the outcome.
+
+Understanding the question
+    1. Understand the question at hand
+    2. Select an analytic approach or method to solve the problem
+    3. Obtain, understand, prepare, and model the data.
+
+Case Study - Modeling
+    Initial decision tree classification model
+        - Low accuracy on "Yes" outcome
+        - need to search (type 1 error false positive)
+
+Data Science Methodology - Evaluation
+
+    When and how to adjust the model?
+        Predictive Model -  used statistical technique to predict future behavior.
+        Descriptive model -  to help specify and/or understand what the system is, what it does, and how it does it.
+        Statistical significance - provide evidence concerning the plausibility of the null hypothesis
+
+    Case Study -  Using the ROC Curve
+
+        Diagnostic tool for classification model evaluation
+            - Classification model performance
+            - True-Postivie Rate vs False-Positive Rate
+            - Optimal model at maximum separation
+
+
+Lesson Summary - Guidelines for a refresher.
+The difference between descriptive and predictive models.
+
+The role of training sets and test sets.
+
+The importance of asking if the question has been answered.
+
+Why diagnostic measures tools are needed.
+
+The purpose of statistical significance tests.
+
+That modeling and evaluation are iterative processes.
