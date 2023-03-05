@@ -1,0 +1,150 @@
+SQL
+SQL CHEAT SHEET LINK
+https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/CheatSheet/SQL-Cheat-Sheet-Bascis.md.html?origin=www.coursera.org
+
+What is SQL?
+    - A language used for relational databases
+    - Query Data
+
+What is Data?
+    - Facts(words, numbers)
+    - Pictures
+    - One of the most critical assets of any business
+    - Needs to be secure
+
+What is a Database?
+    - A repository of data
+    - Provides the functionality for adding, modifying and querying that data.
+    - Different kinds of databases store data in different forms.
+
+Relational Database
+    - Data stored in tabular form (columns and rows)
+    - Columns contain item properties e.g. Last Name, First Name, etc.
+    - Table is collection of related things e.g. Employees, Authors, etc.
+    - Relationships can exist between tables(hence: "relational)
+
+DBMS
+    - Database:  repository of data
+    - DBMS: Database Management System - Software to manage databases
+    - Database, Database Server, Database System, Data Server, DBMS - often used interchangeably
+
+RDBMS
+    -RDBMS: Relational Database Management System
+    -Set of software tools that controls data
+        -access, organization, and storage.
+    - Examples are: MySQL, Oracle Database, IBM Db2, etc.
+
+Basic SQL Commands
+    - Create a table
+    - Insert
+    - Select
+    - Update
+    - Delete
+
+Retriving rows from a table
+    - After creating a table and inserting data into the table, we want to see the data.
+    - SELECT statement
+        - Data Manipulation Language (DML) statement used to read and modify data.
+
+            Select Statement : Query
+            Result from the query : Result set / table
+
+            Select * from <tablename>
+
+Restricting the Result Set : WHERE Clause
+    - Restricts the result set
+    - Always requires a Predicate:
+        - Evaluates to:
+        True, False, or Unknown
+        -Used in the search condition of the Where clause
+    ex. db2 => select book_id, title from Book
+                WHERE book_id='B1'
+
+Reading: https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Module%202/DB0201-l2%20_M2_SELECT_statement.md.html?origin=www.coursera.org
+
+Count
+    COUNT() - a built-in function that retrieves the number of rows matching the query criteria.
+
+    Number of rows in a table:
+        select COUNT(*) from tablename
+ex.
+    Rows in the MEDALS table where Country is Canda:
+        select COUN(COUNTRY) from MEDALS where COUNTRY='CANADA'
+            result: 1/29
+
+Distinct
+    DISTINCT is used to remove duplicate values from a result set.
+
+    Retrieve unique values in a column:
+        select DISTINCT columnname from tablename
+ex.
+    List of unique countries that received GOLD Medals:
+        select DISTINCT COUNTRY from MEDALS
+            where MEDALTYPE = 'GOLD'
+
+Limit
+    LIMIT is ued for restricting the number of rows retrieved from the database
+
+        Retrieve just the first 10 rows in a table:
+            select * from tablename LIMIT 10
+
+        Retrieve 5 rows in the MEDALS table for a particular year:
+            select * from MEDALS where YEAR = 2018 LIMIT 15
+
+Adding rows to a table
+    - Create the table(CREATE TABLE statement)
+    - Populate table with data:
+    - INSERT statement
+        - A Data Manipulation Language (DML) statement used to read and modify data
+
+    INSERT INTO [TableName]
+        <([ColumnName],...)>
+    VALUES([Value],...)
+
+ex.
+    Sample Insertion in SQL
+        INSERT INTO AUTHOR
+            (AUTHOR_ID, LASTNAME, FIRSTNAME, EMAIL, CITY, COUNTRY,)
+        VALUES('A1', 'Chong', 'Raul', 'rfc@ibm.com', 'Toronto', 'CA')
+              ('A1', 'Chong', 'Raul', 'rfc@ibm.com', 'Toronto', 'CA') // Multiple Row insertion
+
+Altering rows of a table - UPDATE statement
+    - After creating a table and inserting data into the table, we can alter the data
+        - UPDATE statement: A Data Manipulation Language (DML) statement used to read and  modify data
+
+    Update[TableName]
+    SET[[ColumnName]=[Value]]
+    <WHERE[Condition]>
+
+    UPDATE AUTHOR
+    SET LASTNAME = 'KATTA'
+        FIRSTNAME = 'LAKSHMI'
+        WHERE AUTHOR_ID='A2'
+
+Deleting Rows from a table
+    - Remove 1 or more rows from the table:
+        - DELETE statement
+            - A DML statement used to read and modify data
+ex.
+    DELETE FROM [TableName]
+    <WHERE[CONDITION]>
+
+    DELETE FROM AUTHOR
+        Where AUTHOR_ID('A2', 'A3')
+
+
+How does the syntax of an INSERT statement look?
+    INSERT INTO table_name (column1, column2, ... )
+    VALUES (value1, value2, ... )
+    ;
+
+How does the syntax of an UPDATE statement look?
+    UPDATE table_name
+    SET column1 = value1, column2 = value2, ...
+    WHERE condition
+    ;
+
+How does the syntax of a DELETE statement look?
+    DELETE FROM table_name
+    WHERE condition
+    ;
