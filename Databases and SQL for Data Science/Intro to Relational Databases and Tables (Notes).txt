@@ -1,0 +1,39 @@
+Relational Database Concepts
+
+Relational Model
+    -Most used data Model
+    - Allows for data independence
+    - Data is stored in tables
+    logical data independence - physical data independence - physical storage independence.
+
+Entity-Relationship Model
+    -Used as a tool to design relational databases
+
+Mapping Entity Diagrams to Tables
+    - Entities becomes tables
+    - Attributes get translated into columns
+
+Cloud databases
+    Ease of Use and Access
+        - API
+        - Web Interface
+        - Cloud or Remote Applications
+    Scalability & Economics
+        - Expand/Shrink Storage & Compute Resources
+        - Pay per use
+
+Examples of Cloud Databases
+    - Amazon Relational Database Services (RDS)
+    - Microsoft Azure SQL Database
+    - Oracle Database Cloud Services
+    - Databases for PosgreSQL
+    - IBMDB2
+        Available as:
+        Virtual Machines or Managed Service
+        Single or Multi tenant
+
+Database service instance
+    - DBaaS provides users with access to Database resource in cloud without
+    setting up hardware and installing software.
+    - Database service instance holds data in data objects / tables
+    - Once data is loaded, it can be queried using web interfaces and Applications
