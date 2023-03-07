@@ -1,0 +1,50 @@
+Benefits of python for database programming
+
+    Python ecosystem :  Numpy pandas matplotlib and scipy
+    Ease of use
+    Portable
+    Python supports relational database systems
+    Python Database API(DB-API)
+    Detailed Documentation
+
+What is a SQL API?
+
+    CONNECT(db, user, pswd)
+    SEND("update employees set..")
+    EXECUTE()
+    STATUS_CHECK()
+    OK
+    DISCONNECT()
+
+What are connection methods?
+
+.cursor()
+.commit()
+.rollback()
+.close()
+
+What are cursor methods?
+.callproc()
+.execute()
+.executemany()
+.fetchone()
+.fetchmany()
+.fetchall()
+.nextset()
+.arraysize()
+.close()
+
+Writing code using DB-API
+
+from dbmodule import connect
+#Create connection object
+Connection = connect('databasename', 'username','pswd')
+
+#Create a cursor object
+Cursor = connection.cusor()
+
+#Run Queries
+Cursor.execute('select * from mytable')
+Results=cursor.fetchall()
+
+Cursor.close()
