@@ -1,0 +1,25 @@
+Accessing Multiple Tables with Implicit Joins Exercise
+
+Problem:
+
+Perform an implicit cartesian/cross join between EMPLOYEES and JOBS tables.
+
+Solution
+select * from EMPLOYEES, JOBS;
+
+Problem:
+
+Retrieve only the EMPLOYEES records that correspond to jobs in the JOBS table.
+
+SELECT * FROM EMPLOYEES as E, JOBS as J WHERE E.JOB_ID = J.JOB_IDENT
+
+Problem:
+
+Redo the previous query, but retrieve only the Employee ID, Employee Name and Job Title.
+
+Solution
+SELECT E.EMP_ID, E.F_NAME, E.L_NAME, J.JOB_TITLE FROM EMPLOYEES as E, JOBS as J WHERE E.JOB_ID = J.JOB_IDENT
+
+Problem:
+
+Redo the previous query, but specify the fully qualified column names with aliases in the SELECT clause.

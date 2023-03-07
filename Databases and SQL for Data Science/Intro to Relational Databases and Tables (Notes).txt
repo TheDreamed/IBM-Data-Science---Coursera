@@ -37,3 +37,317 @@ Database service instance
     setting up hardware and installing software.
     - Database service instance holds data in data objects / tables
     - Once data is loaded, it can be queried using web interfaces and Applications
+
+Types of SQL statements (DDL vs DML)
+    - SQL Statement types: DDL and DML
+    - DDL (Data Definition Language) statements:
+        - Define, Change, or drop data
+    - Common DDL:
+        CREATE
+        ALTER
+        TRUNCATE
+        DROP
+
+DML (Data Manipulation Language) statements:
+    - Read and modify data
+    - CRUD operations (Create, Read, Update, Delete rows)
+Common DML:
+    INSERT
+    SELECT
+    UPDATe
+    DELETE
+
+CREATE TABLE Statement
+
+CREATE table Syntax:
+
+    CREATE TABLE table_name
+        (
+            column_name_1 datatype optional parameters,
+            column_name_2 datatype,
+            ...
+            column_name_n datatype
+        )
+
+Example
+    Create a table for Canadatian provinces
+
+        CREATE TABLE provinces(
+            id char(2) PRIMARY KEY NOT NULL,
+            name varchar(24)
+        )
+
+    Create a table for Author
+
+        CREATE TABLE author(
+            Author_ID CHAR(2) PRIMARY KEY NOT NULL,
+            lastname VARCHAR(15) NOT NULL,
+            firstname VARCHAR(15) NOT NULL,
+            email VARCHAR(40),
+            city VARCHAR(15),
+            country CHAR(2)
+        )
+
+ALTER TABLE ...  ADD COLUMN
+    - Add or remove columns
+    - Modify the data type of columns
+    - Add or remove keys
+    - Add or remove constraints
+    Syntax:
+        ALTER TABLE <table_name>
+            ADD COLUMN <column_name_1> datatype
+            ...
+            ADD COLUMN <column_name_n> datatype;
+
+    Example:
+        // Add column
+        ALTER TABLE author
+            ADD COLUMN telephone_number BIGINT;
+        //Alter the column
+        ALTER TABLE <table_name>
+            ALTER COLUMN <column_name> SET DATA TYPE
+        <datatype>;
+        //Sample
+        ALTER TABLE <table_name>
+            ALTER COLUMN <column_name> SET DATA TYPE
+        FLOAT;
+        Note: altering the data type may result to an error if the given data isn't compatible.
+        //Drop a column
+        ALTER TABLE author
+            DROP COLUMN telephone_number;
+        //Drop a Table
+        DROP TABLE <table_name>;
+        //Delete the rows / Delete all the data from the table.
+        TRUNCATE TABLE <table_name>
+            IMMEDIATE;
+        //Example
+        TRUNCATE TABLE author
+            IMMEDIATE;
+To read: https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Module%202/DB0201-l2%20_M2_CREATE_DROP.md.html?origin=www.coursera.org
+To read: https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20CREATE%20-%20ALTER%20-%20TRUNCATE%20-%20DROP/instructional-labs.md.html?origin=www.coursera.org
+
+
+Refining your results
+
+Retrieving rows from a table
+
+Retrieving rows -  using a String Pattern
+
+    -WHERE requires a predicate
+    - A predicate is an expression that evaluates to True, False, or Unknown.
+    - Use the LIKE predicate with string patterns for the search
+Example:
+    WHERE <columnname> LIKE<StringPattern>
+Example2:
+    db2 => select firstname from Author
+            WHERE firstname like 'R%'
+
+Retrieving rows -  using a Range
+    db2 => select title, pages from Book
+            WHERE pages >= 290 AND pages <=300
+
+Retrieving rows -  using a Set of Values
+    db2 => select firstname, lastname, country, from Author
+                WHERE country='AU' OR country='BR'
+                WHERE country IN('AU','BR') // Alternative
+
+Sorting the Result Set
+
+Using the ORDER BY clause
+    Syntax
+        db2=> select title from Book
+                ORDER BY title DESC
+
+        // Using the column column number
+        db2=> select title, pages from Book
+                ORDER BY 2
+
+Grouping Result Sets
+
+    GROUP BY Clause
+        db2=> select country, count(country)
+                from Author GROUP BY country
+        db2=> select country, count(country)
+                as Count from Author group by country // Better
+
+Restricting the Result Set - HAVING clause
+     db2=> select country, count(country)
+                as Count from Author
+                group by country
+                having count(country) > 4
+
+SQL Cheat Sheet: Intermediate - LIKE, ORDER BY, GROUP BY
+
+https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/CheatSheet/SQL-Cheat-Sheet-Intermediate.md.html?origin=www.coursera.org
+
+
+Built-in Functions
+    - Most databases come with built-in SQL Functions.
+    - Built-in functions can be included as part of SQL statements.
+    - Database functions can significantly reduce the amount of data that needs to be retrieved
+    - Can speed up data processing
+
+Aggregate or Column Functions
+    - INPUT: Collection of values(e.g entire column)
+    - Output: Single Value
+    - Examples: SUM(), MIN(), MAX(), AVG(), etc.
+
+SUM
+    select SUM(COST) from PETRESCUE
+
+Column Alias
+    Example: Explicitly name the output column SUM_OF_COST
+    select SUM(COST) as SUM_OF_COST
+        from PETRESCUE
+MIN MAX
+    select MAX(QUANTITY) from PETRESCUE
+
+AVG
+    select AVG(COST) from PETRESCUE
+        Example: Caluclate the average COST per 'DOG'
+    select AVG(COST/QUANTITY) from PETRESCUE where ANIMAL = 'Dog'
+
+SCALAR and STRING Functions
+
+SCALAR: Perform operations on every input value
+EXAMPLES: ROUND(), LENGTH(), UCASE, LCASE
+
+Example 6: Round UP or DOWN every value in COST:
+
+    select
+        ROUND(COST)
+        from PETRESCUE
+
+Example 7: Retrieve the length of each value in ANIMAL
+    select
+        LENGTH(ANIMAL)
+        from PETRESCUE
+
+UCASE, LCASE
+
+Example 8:  Retrieve ANIMAL in UPPERCASE
+
+    select
+        UCASE(ANIMALS)
+        from PETRESCUE
+Example 9: Use the function in a WHERE clause:
+    select * from PETRESCUE
+    where LCASE(ANIMAL) = 'cat'
+
+EXAMPLE 10: USE DISTINCT() function to get unique values:
+
+    select DISTINCT(UCASE(ANIMAL)) from PETRESCUE
+
+
+
+Date, Time Functions
+
+Most databases contain special datatypes for dates and times.
+
+DATE: YYYYMMDD
+TIME: HHMMSS
+TIMESTAMP: YYYYXXDDHHMMSSZZZZZ
+
+
+Example 11:  Extract the DAY portion from a date:
+    select DAY(RESCUEDATA) from PETRESCUE
+        where ANIMAL='CAT'
+Example 12: Get the number of rescues during the month of May:
+    select COUNT(*) from PETRESCUE
+        where MONTH(RESCUEDATE) = '05'
+
+Date or Time Arithmetic
+    Select(RESCUEDATE + 3 DAYS) FROM PETRESCUE
+
+CURRENT_DATE, CURRENT_TIME
+    select(CURRENT_DATE - RESCUEDATE) from PETRESCUE
+
+Sub-Queries and Nested Selects
+
+Sub-query: A query inside another query
+
+select COLUMN1 from TABLE
+    where COLUMN2 = (SELECT MAX(COLUMN2) from TABLE)
+
+Sub-queries to evaluate Aggregate functions
+    - Cannot evaluate Aggregate functions like AVG() in the WHERE clause-
+    - Therefore, use a sub-Select expression:
+
+select EMP_ID, F_NAME, L_NAME, SALARY
+    from employees
+    where SALARY <
+    (select AVG(SALARY) from employees)
+
+Sub-queries in list of columns
+    - Substitute column name with a sub-query
+    - Called Column Expressions
+
+select EMP_ID, SALARY, AVG(SALARY) AS AVG_SALARY from employees; //incorrect
+
+
+select EMP_ID, SALARY,
+    (select AVG(SALARY) from employees) AS AVG_SALARY from employees; //corret
+
+Sub-queries in FROM clause
+    -Substitute the TABLE name with a sub-query
+    -Called Derived Tables or Table Expressions
+
+    Example:
+        select * from
+            (select EMP_ID, F_NAME, L_NAME, DEP_ID from employees) AS EMP4ALL
+
+
+Working with Multiple Tables:
+
+Ways to access multiple tables in the same query:
+
+1. Sub-queries
+2. Implicit JOIN
+3. JOIN operators (INNER JOIN, OUTER JOIN, etc.)
+
+Accessing Multiple Tables with Sub-queries
+    To retrieve only the employee records that corresponds to departments in the DEPARTMENTS table:
+
+select * from employees
+    where DEP_ID IN
+    (select DEPT_ID_DEP from departments)
+
+Multiples Tables with Sub-queries
+
+select * from employees
+    where DEP_ID IN
+    (select DEPT_ID_DEP from departments
+            where LOC_ID = 'L0002');
+
+    select DEP_ID, DEP_NAME from DEPARTMENTS
+        where DEPT_ID_DEP IN
+            (select DEP_ID from employees where SALARY > 70000)
+
+Accessing multiple tables with Implicit JOIN
+Specify 2 tables in the FROM clause:
+    select * from employees, departments
+
+The result is a full join (Cartesian join):
+    Every row in the first table is joined with every row in the second table.
+
+
+Use additional operands to limit the result set:
+
+select * from employees, departments
+    where employees.DEP_ID =
+        departments.DEPT_ID_DEP;
+
+Use shorter aliases for table names:
+
+select * from employees E, departments D
+    where E.DEP_ID = D.DEPT_ID_DEP;
+
+SQL CHEET SHEET: FUNCTIONS and IMPLICIT JOIN
+
+https://www.coursera.org/learn/sql-data-science/ungradedWidget/wfZzv/sql-cheat-sheet-functions-and-implicit-join
+
+Column names in the select clause can be pre-fixed by aliases:
+
+select E.EMP_ID, D.DEP_ID_DEP from
+    employees E, departments d
+    where E.DEP_ID = D.DEPT_ID_DEP

@@ -1,0 +1,40 @@
+Problem:
+Execute a failing query (i.e. one which gives an error) to retrieve all employees records whose salary is lower than the average salary.
+
+Solution
+select *
+from EMPLOYEES
+where salary < AVG(salary);
+
+Problem:
+
+Execute a working query using a sub-select to retrieve all employees records whose salary is lower than the average salary.
+
+Solution
+select EMP_ID, F_NAME, L_NAME, SALARY
+from EMPLOYEES
+where SALARY < (select AVG(SALARY)
+                from EMPLOYEES);
+
+Problem:
+
+Execute a failing query (i.e. one which gives an error) to retrieve all employees records with EMPID, SALARY and maximum salary as MAXSALARY in every row.
+
+Solution
+select EMP_ID, SALARY, MAX(SALARY) AS MAX_SALARY
+from EMPLOYEES;
+
+Problem:
+
+Execute a Column Expression that retrieves all employees records with EMPID, SALARY and maximum salary as MAXSALARY in every row.
+
+Solution
+select EMP_ID, SALARY, ( select MAX(SALARY) from EMPLOYEES ) AS MAX_SALARY
+from EMPLOYEES;
+
+Problem:
+
+Execute a Table Expression for the EMPLOYEES table that excludes columns with sensitive employee data (i.e. does not include columns: SSN, B_DATE, SEX, ADDRESS, SALARY).
+
+Solution
+select * from ( select EMP_ID, F_NAME, L_NAME, DEP_ID from EMPLOYEES) AS EMP4ALL;

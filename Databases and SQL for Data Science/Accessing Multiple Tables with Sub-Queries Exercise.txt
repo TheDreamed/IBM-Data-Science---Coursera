@@ -1,0 +1,34 @@
+Accessing Multiple Tables with Sub-Queries
+
+Problem:
+
+Retrieve only the EMPLOYEES records that correspond to jobs in the JOBS table.
+
+Solution
+select * from EMPLOYEES where JOB_ID IN (select JOB_IDENT from JOBS);
+
+Problem:
+
+Retrieve only the list of employees whose JOB_TITLE is Jr. Designer.
+Solution
+select * from EMPLOYEES where JOB_ID IN (select JOB_IDENT from JOBS where JOB_TITLE= 'Jr. Designer');
+
+Problem:
+
+Retrieve JOB information and who earn more than $70,000.
+
+select JOB_TITLE, MIN_SALARY,MAX_SALARY,JOB_IDENT from JOBS where JOB_IDENT IN (select JOB_ID from EMPLOYEES where SALARY > 70000 );
+
+Problem:
+
+Retrieve JOB information and list of employees whose birth year is after 1976.
+
+Solution
+select JOB_TITLE, MIN_SALARY,MAX_SALARY,JOB_IDENT from JOBS where JOB_IDENT IN (select JOB_ID from EMPLOYEES where YEAR(B_DATE)>1976 );
+
+Problem:
+
+Retrieve JOB information and list of female employees whose birth year is after 1976.
+
+
+select JOB_TITLE, MIN_SALARY,MAX_SALARY,JOB_IDENT from JOBS  where JOB_IDENT IN (select JOB_ID from EMPLOYEES where YEAR(B_DATE)>1976 and SEX='F' );
