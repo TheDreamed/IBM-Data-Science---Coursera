@@ -1,0 +1,17 @@
+Getting a list of tables in the dadtabase
+
+SQL Server
+Information_Schema.tables
+
+Oracle
+ALL_TABLES or USER_TABLES
+
+DB2 SYSCAT.TABLES
+
+
+Query system catalog to get a list of tables & their properties:
+select * from syscat.tables
+
+select TABSCHEMA, TABNAME, CREATE_TIME
+    from syscat.tables
+    where tabschema = 'ABC12345'
