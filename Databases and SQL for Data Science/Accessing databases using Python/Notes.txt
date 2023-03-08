@@ -48,3 +48,6 @@ Cursor.execute('select * from mytable')
 Results=cursor.fetchall()
 
 Cursor.close()
+
+
+Creating Tables, Loading Data, and Querying Data.
