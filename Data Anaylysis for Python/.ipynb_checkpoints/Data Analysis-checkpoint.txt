@@ -1,0 +1,9 @@
+Data Analysis
+
+Why Data Analysis
+- Data is everywhere.
+- Data analysis/data science helps us answer questions from data.
+- Data analysis plays an important role in:
+    - Discovering useful information
+    - Answering questions
+    - Predicting future or the unkown
