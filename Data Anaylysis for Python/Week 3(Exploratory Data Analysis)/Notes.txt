@@ -1,0 +1,93 @@
+Exploratory Data Analysis (EDA)
+
+    Preliminary step in data analysis to:
+        - Summarize main characteristics of the data
+        - Gain better understanding of the data set.
+        - Uncover relationships between variables.
+        - Extract important variables.
+
+Descriptive Statistics
+
+    - Describe basic features of data
+    - Giving short summaries about the sample and measures of the data
+
+Describe.()
+
+-Summarize statistics. A pandas method.
+
+Value_counts()
+
+- summarize the categorical data.
+
+Scatter Plot
+- Each observation represented as a point.
+- Scatter plot show the relationship between two variables.
+    1. Predictor / independent variables on x-axis.
+    2. Target / dependent variables on y-axis.
+
+
+GroupBy (Grouping Data)
+
+- Can be applied on categorical variables.
+- Group data into categories.
+- Single or multiple variables.
+
+
+Pivot()
+
+- One variable displayed along the columns and the other variable displayed along the rows.
+
+Heatmap
+
+- Plot target variable over multiple variables
+
+Correlation
+
+- Measures to what extent different variables are interdependent.
+
+For Example:
+Lung Cancer - Smoking
+Rain - Umbrella
+
+Correlation doesn't imply causation.
+
+Correlation - Postiive Linear relationship / Negative Linear Relationship
+
+Pearson Correlation
+    Measure the strength of the correlation between two features.
+        - Correlation coefficient
+        - P - Value
+    Correlation coefficient
+        - Close to +1: Large Positive relationship
+        - Close to -1: Large negative relationship
+        - Close to 0 : No Relationship
+    P-Value
+        P-Value < 0.001 Strong certainty in the result
+        P-Value < 0.05  Moderate certainty in the result
+        P-Value < 0.1 Weak certainty in the result
+        P-Value > No Certainty in the result
+    Strong correlation:
+        Correlation coefficient close to 1 or -1
+        P value less than 0.001
+
+Categorical variables
+
+We use the Chi-square Test Association (denoted as x2)
+The test is intended to test how likely it is that an observed distribution is due to chance.
+
+Chi-Squared Test for Association
+The Chi-square tests a null hypotthesis that the variables are independent.
+
+Used to determine relationship between 2 categorical variables.
+It tests for association between 2 variables and tells us how likely
+the is association due to chance
+The test assumes (null hypothesis) that the variables are independent.
+The the model does not fit, then that proves that the variables are dependent.
+
+calculation steps:
+- use contigency table for observed values from a dataset.
+- on contigency table,  for each cell, (row total * column total)/grand total
+- this will create table with expected value
+- calculate chi square value: SUM((observed-expected)^2 / expected)
+- determine p-value for that chi square value
+- if p<0.05, then the variables are not independent (Reject null)
