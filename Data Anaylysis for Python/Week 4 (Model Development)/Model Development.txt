@@ -1,0 +1,4 @@
+Model Development
+    - A model can be thought of as a mathematical equation used to predict a value given one or more other values.
+    - Relating one or more independent variables to dependent variables.
+    - The more relevant data you have the more accurate your model is.
