@@ -2,3 +2,11 @@ Model Development
     - A model can be thought of as a mathematical equation used to predict a value given one or more other values.
     - Relating one or more independent variables to dependent variables.
     - The more relevant data you have the more accurate your model is.
+
+
+Linear regression will refer to one independent variable to make a prediction
+Multiple Linear Regression will refer to multiple independent variables to make a prediction
+
+Simple Linear Regression (need to research more)
+1. The predictor (independent) variable - x
+2. The target (dependent) variable - y
