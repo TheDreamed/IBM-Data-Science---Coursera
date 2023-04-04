@@ -1,0 +1,186 @@
+
+Machine Learning with Python
+
+Use ML to make predictions...
+
+Decision Trees
+Use ML to make decisions
+Use ML for customer segmentation
+Recommendation Systems
+Use python libraries to build ML models.
+
+Customer churn is the percentage of customers that stopped using your company's product or service during a certain time frame.
+
+How Machine learning works
+
+1. Feature Extractions - example: Getting the (Legs, ears, eye size when open and closed, face size etc. of animals)
+2. ML models
+
+Example of ML
+
+Recommendation - produce suggestions based on types of shows you watch
+Loan Applications - ML used to predict defaults
+Telecom - unsubscription prediction based on demographic.
+
+Major machine learning techniques
+
+Regression / Estimation
+    -  Predicting continuous values (House price prediction)
+Classification
+    - Predicting the item class category of a case (Churn classification)
+Clustering
+    - Finding the structure of data; summarization (Customer segmentation.)
+Associations
+    - Associating prequent co-occuring items/events (ex. Grocery items that are bought together)
+Anomaly Detection
+    - Discovering abnormal and unusual cases (Credit card fraud detection)
+Sequence Mining
+    - Predicting next events; click-stream (Markov Model, HMM)
+Dimension Reduction
+    - Reducing the size of data (PCA)
+Recommendation Systems
+    - Recommending items.
+
+
+AI components
+    - Computer Vision
+    - Language Processing
+    - Creativity
+    - summarization
+
+Machine Learning
+    - Classification
+    - Clustering
+    - Neural Networks
+
+Revolution in ML
+    - Deep Learning
+
+Python for Machine Learning
+
+Python libraries for Machine learning
+    -Numpy
+    -SciPy
+    -matplotlib
+    -Pandas
+    -Scikit-learn
+
+Scikit-learn
+    - Free software machine learning library
+    - Classification, Regression and Clustering Algorithm
+    - Works with NumPy and SciPy
+    - Great Documentation
+    - Easy to Implement
+
+Supervised vs Unsupervised Algorithms
+
+What is Supervised Learning?
+    -  Teaching the model with labeled data.
+
+Two types of Supervised Learning
+    - Classification
+        - process of predicting discrete class labels or categories
+    - Regression
+        - predicting continuous values.
+
+What is UnSupervised Learning?
+    Techniques:
+        - Dimension Reduction
+        - Density Estimation
+        - Market Basket Analysis
+        - Clustering
+What is Clustering
+    - Clustering is grouping of data points or objects that are somehow similar by:
+        -Discovering structure
+        - summarization
+        - Anomaly detection
+
+Introduction to Regression
+
+    - process of predicting a continuous value.
+
+Types of Regression
+
+Simple Regression ex. co2 emission vs enginesize
+    - Linear
+    - Non Linear
+Multiple Regression ex. co2emission vs engine and cylinders of cars
+    - Multiple Linear Regression
+    - Multiple Non Linear Regression
+
+Applications of Regression
+
+- Sales forecasting
+- Satisfaction Analysis
+- Price Estimation
+- Employment Income
+
+Regression Algorithms
+
+- Ordinal Regression
+- Poisson Regression
+- Fast Forest Quantile Regression
+- Linear, Polynomial, Lasso, Stepwise, Ridge Regression
+- Bayesian Linear Regression
+- Neural Network Regression
+- Decision Forest Regression
+- Boosted Decision Tree Regression
+- KNN (K-nearest neighbors)
+
+Simple Linear Regression
+
+Using linear regression to predict continuous values
+
+
+How to find the best fit.
+
+Model Evaluation approaches
+
+- Train and test on the same dataset
+- Train/Test Split
+
+Best approach for most accurate results?
+
+Tran and test on the same data set.
+    - High "training accuracy"
+    - Low "Out of sample accuracy."
+
+What is training & out-of-sample accuracy?
+
+Training accuracy
+    - High training accuracy isn't necessarily a good thing.
+    - Result of over-fitting.
+        - Over-fit: the model is overly trained to the dataset, which may capture noise and produce a non-generalized model.
+Out-of-Sample accuracy
+    - It's important that our models have a high, out-of-sample accuracy
+    - How can we improve out-of-sample accuracy?
+
+
+Train/Test Split Evaluation approach
+    - Have a set to train and to test. This improves out of sample accuracy.
+    - Mutually Exclusive.
+    - Highly dependent on which datasets the data is trained and tested.
+
+How to use K-fold cross validation?
+    - fold the data set into sections.
+    - Train parts of it and test it to the fold.
+    - Get the average result. (The accuracy)
+
+Regression accuracy
+    - Compare actual values and predicted values.
+
+What is an error of the model?
+    - Measure of how far the data is from the fitted regression line.
+
+Mean absolute error
+    -  Average error
+
+Mean absolute error
+    - Square of the error
+
+Root mean squared error
+    - Square root of erorr.
+
+Residual sum of square (relative absolute error)
+
+Relative square error
