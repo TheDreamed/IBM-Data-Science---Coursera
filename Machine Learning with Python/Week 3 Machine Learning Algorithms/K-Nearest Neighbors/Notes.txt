@@ -1,0 +1,126 @@
+Intro to Classifciation
+    - A supervised learning approach
+    - Categorizing some unknown  items into a discrete set of categories or "classes"
+    - The target attribute is a categorical variable.
+
+How does classification work?
+    - Classifcation determines the class label for an unlabeled test case.
+
+Classification use cases
+    - Which category a customer belongs to?
+    - Whether a customer switches to another provider/brand?
+    - Whether a customer responds to a particular advertising campaign?
+
+Classification applications
+    - Detecting spam emails
+    - Speech Recognition
+    - Writing Recognition
+
+Intro to K nearest neighbor
+    - A method for classifying cases based on their similarity to other cases.
+    - Cases that are near each other are said to be "neighbors"
+    - Based on similar cases with same class labels are near each other.
+    - Use euclidean distance.
+
+K-Nearest Neigbor Algorithm
+    - Pick a value for K.
+    - Calculate the distance of unkown case from all cases. (Euclidean Distance) distance = the square root of the sum(x1 - x2)squared
+    - Select the K-observations in the training data that are "nearest" to the unknown data point.
+    - Predict the response of the unkown data point using the most popular response value from the K-Nearest Neighbor.
+    - can also be used for regression (Houses)
+What is the best value of K for KNN?
+    - Test every K and look for the best accuracy.
+Classification Accuracy.
+
+
+The F1 score is a performance metric used in classification problems to evaluate the trade-off between precision and recall. It is the harmonic mean of precision and recall, providing a balanced measure of these two metrics. F1 score is particularly useful when dealing with imbalanced datasets or when both false positives and false negatives are important to consider.
+
+Formula:
+F1 Score = 2 * (Precision * Recall) / (Precision + Recall)
+
+where:
+
+Precision = True Positives / (True Positives + False Positives)
+Recall = True Positives / (True Positives + False Negatives)
+In this formula:
+
+True Positives (TP) are the number of positive instances correctly classified as positive.
+False Positives (FP) are the number of negative instances incorrectly classified as positive.
+False Negatives (FN) are the number of positive instances incorrectly classified as negative.
+The F1 score ranges from 0 to 1, with 0 indicating the worst possible performance and 1 indicating perfect precision and recall.
+
+Use cases:
+
+Imbalanced datasets: When the number of instances in one class is significantly smaller than the other, the F1 score is useful to account for the imbalance and provide a balanced evaluation of the classifier's performance.
+False positives and false negatives: In situations where both false positives and false negatives are important to consider, such as fraud detection, medical diagnosis, or spam filtering, the F1 score provides a single metric that balances the trade-off between precision and recall.
+Model comparison: When comparing different classification models, the F1 score can be used as a single performance metric to determine which model performs better in terms of
+
+Precision: Precision measures the proportion of true positive predictions among all positive predictions made by the classifier. In other words, it tells you how many of the instances that the classifier predicted as positive are actually positive. Precision is important when the cost of false positives is high. It is calculated as:
+Precision = True Positives / (True Positives + False Positives)
+
+Recall: Recall, also known as sensitivity or true positive rate (TPR), measures the proportion of true positive instances that were correctly identified by the classifier among all actual positive instances. It tells you how well the classifier identifies positive instances. Recall is important when the cost of false negatives is high. It is calculated as:
+
+Jaccard Index
+
+Precision and recall are two distinct performance metrics used in classification problems to evaluate different aspects of a classifier's performance.
+
+Precision: Precision measures the proportion of true positive predictions among all positive predictions made by the classifier. In other words, it tells you how many of the instances that the classifier predicted as positive are actually positive. Precision is important when the cost of false positives is high. It is calculated as:
+Precision = True Positives / (True Positives + False Positives)
+
+Recall: Recall, also known as sensitivity or true positive rate (TPR), measures the proportion of true positive instances that were correctly identified by the classifier among all actual positive instances. It tells you how well the classifier identifies positive instances. Recall is important when the cost of false negatives is high. It is calculated as:
+Recall = True Positives / (True Positives + False Negatives)
+
+The difference between precision and recall lies in their focus. Precision focuses on the accuracy of positive predictions, while recall focuses on the classifier's ability to identify all positive instances. In some applications, precision is more important, while in others, recall is more important. There is often a trade-off between precision and recall, as increasing one may decrease the other.
+
+The F1 score, which is the harmonic mean of precision and recall, is a single metric that provides a balanced measure of both aspects. It is particularly useful when both false positives and false negatives are important to consider or when dealing with imbalanced datasets.
+
+
+
+
+Mark Spencer Jordan
+Explain Jaccard Index, its formula and use cases.
+The Jaccard Index, also known as the Jaccard similarity coefficient or Intersection over Union (IoU), is a measure of similarity between two sets. It quantifies the degree to which two sets share common elements, making it useful for comparing the similarity of samples in various applications.
+
+Formula:
+Jaccard Index (A, B) = |A ∩ B| / |A ∪ B|
+
+where:
+
+A and B are two sets
+|A ∩ B| denotes the size of their intersection (i.e., the number of elements common to both sets)
+|A ∪ B| denotes the size of their union (i.e., the total number of unique elements in both sets)
+The Jaccard Index ranges from 0 to 1, where 0 indicates that the sets have no elements in common, and 1 indicates that the sets are identical. A higher Jaccard Index indicates a greater similarity between the two sets.
+
+Use cases:
+
+Text analysis: The Jaccard Index can be used to compare the similarity of documents, sentences, or sets of keywords by treating them as sets of words or n-grams. This can be useful for tasks such as document clustering, text classification, or plagiarism detection.
+Image recognition: In object detection and segmentation tasks, the Jaccard Index (IoU) is often used to evaluate the performance of the model by comparing the predicted bounding boxes or segmentation masks with the ground truth.
+Collaborative filtering and recommendation systems: The Jaccard Index can be employed to measure the similarity between users or items based on their preferences, helping to identify similar users or items for personalized recommendations.
+Clustering and community detection: The Jaccard Index can be used as a similarity measure for clustering algorithms or community detection in networks, helping to group similar items or nodes together.
+Genomic analysis: The Jaccard Index can be applied to compare the similarity of gene sets or other biological features, aiding in the identification of common patterns or functional relationships.
+These are just a few examples of the many applications where the Jaccard Index can be utilized to quantify similarity between sets.
+
+Log Loss, also known as logarithmic loss or cross-entropy loss, is a performance metric used in classification problems, particularly for probabilistic classifiers. It measures the discrepancy between the true class labels and the predicted probabilities of the classes. Log Loss penalizes not only incorrect predictions but also the confidence of those incorrect predictions, making it a suitable metric for evaluating classification models that output probabilities.
+
+Formula:
+For binary classification, the Log Loss is calculated as follows:
+
+Log Loss = -(1/N) * Σ [y * log(p) + (1 - y) * log(1 - p)]
+
+where:
+
+N is the number of instances in the dataset
+y is the true class label (0 or 1)
+p is the predicted probability of the instance belonging to class 1
+Σ denotes the summation over all instances in the dataset
+For multi-class classification, the Log Loss is calculated as:
+
+Log Loss = -(1/N) * Σ Σ y_ij * log(p_ij)
+
+where:
+
+N is the number of instances in the dataset
+y_ij is the true class label for instance i and class j (1 if instance i belongs to class j, 0 otherwise)
+p_ij is the predicted probability of instance i belonging to class j
+The first Σ denotes the summation over all instances in the dataset, and the second Σ denotes the summation over all classes
+A lower Log Loss indicates better model performance. A perfect classifier would have a Log Loss of 0, while a completely random classifier would have a Log Loss close to the natural logarithm of the number of classes.
