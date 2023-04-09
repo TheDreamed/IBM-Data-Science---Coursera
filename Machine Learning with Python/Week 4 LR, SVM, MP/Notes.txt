@@ -1,0 +1,24 @@
+Logistic Regression
+    - is a classification algorithm for categorical variables.
+    - Mostly includes multiple independent variables. (Continuous or Categorical Variables)
+    - Categorical variables must be in a dummy form.
+
+
+Logistic regression applications
+    - Predict the probability of a person having a heart attack.
+    - Predicting the mortality in injured patients
+    - Predicting Purchasing a proudct / halt a subscription
+    - Predicting Probability of a given process or product
+    - Predicting the likelihood of a homeowner defaulting on a mortgage
+
+When is logistic rgeression suitables
+    - If your data is binary.
+    - If you need probabilistic results.
+    - When you need a linear decision boundary.
+
+Sigmoid Function in Logistic Regression
+    - Logistic Function
+
+Logistic Regression Training
+    - Change the weight -> reduce the cost
+    - Cost function Cost(yhat, y) = 
